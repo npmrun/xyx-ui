@@ -17,9 +17,6 @@ jobs:
         npm install
         npm run build
         npm run build-storybook
-        rm -rf ./storybook-static/.git
-        rm -rf ./storybook-static/.github
-        rm -rf ./storybook-static/.gitignore
     - name: Deploy
       uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
       with:
