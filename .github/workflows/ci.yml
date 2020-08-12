@@ -14,12 +14,12 @@ jobs:
         lfs: true
     - name: Install and BuildA 🔧 # Tsshis example project is built using npm and outputs the result to the 'build' folder. Replace with the commands required to build your project, or remove this step entirely if your site is pre-built.
       run: |
-        rm -rf xyx-ui/.git
-        rm -rf xyx-ui/.github
-        rm -rf xyx-ui/.gitignore
         npm install
         npm run build
         npm run build-storybook
+        rm -rf ./storybook-static/.git
+        rm -rf ./storybook-static/.github
+        rm -rf ./storybook-static/.gitignore
     - name: Deploy
       uses: alex-page/blazing-fast-gh-pages-deploy@v1.1.0
       with:
